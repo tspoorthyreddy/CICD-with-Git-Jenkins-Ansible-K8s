@@ -31,3 +31,8 @@ git --version
 ```
 
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/480b1fd6-f2b9-4e54-876d-d90712ce7b0c)
+
+copy the git path, go to jenkins UI Dashboard > Manage Jenkins > Tools Under Git Installations
+
+![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/075fe103-0e8b-41c3-9f7e-320fd094fa66)
+
