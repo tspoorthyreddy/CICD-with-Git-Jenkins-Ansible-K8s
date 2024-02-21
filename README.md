@@ -20,4 +20,14 @@ service jenkins status
 service jenkins start
 ```
 
+Integrate GitHub with Jenkins
+1. Install Git on Jenkins Instance
+2. Install GitHub Plugin on Jenkins GUI
+3. Configure Git on Jenkins GUI
 
+```
+yum install git
+git --version
+```
+
+![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/480b1fd6-f2b9-4e54-876d-d90712ce7b0c)
