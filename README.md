@@ -21,6 +21,7 @@ amazon-linux-extras install java-openjdk11
 yum install jenkins
 service jenkins status
 service jenkins start
+systemctl enable jenkins
 ```
 
 Integrate GitHub with Jenkins (Git version 2.39)
@@ -89,5 +90,28 @@ Uncheck automatic maven installation
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/ca343272-57e7-4132-aa51-9bbfaeba53f2)
 
 Create a Build job using maven project
+
+Integrate Sonarqube with Jenkins (Sonarqube version )
+1. Install Sonarqube on Jenkins Instance
+2. Install "Sonarqube Scanner" Plugin on Jenkins GUI
+3. Configure Sonarqube on Jenkins GUI
+
+```
+yum install unzip
+adduser sonarqube
+su - sonarqube
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip
+unzip *
+chmod -R 755 /home/sonarqube/sonarqube-9.4.0.54424
+chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
+cd sonarqube-9.4.0.54424/bin/linux-x86-64/
+./sonar.sh start
+```
+
+Open port 9000 on jenkins server
+access sonarqube on <server public ip>:9000
+Install "Sonarqube Scanner" Plugin on Jenkins GUI
+Add sonarqube credentials in jenkins
+![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/ab4877f7-d00f-4129-bab2-28ccb59e340c)
 
 
