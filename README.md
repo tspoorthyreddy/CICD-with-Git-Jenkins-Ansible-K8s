@@ -20,9 +20,9 @@ service jenkins status
 service jenkins start
 ```
 
-Integrate GitHub with Jenkins
+Integrate GitHub with Jenkins (Git version 2.39)
 1. Install Git on Jenkins Instance
-2. Install GitHub Plugin on Jenkins GUI
+2. Install "GitHub" Plugin on Jenkins GUI
 3. Configure Git on Jenkins GUI
 
 ```
@@ -32,7 +32,59 @@ git --version
 
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/480b1fd6-f2b9-4e54-876d-d90712ce7b0c)
 
+go to jenkins UI Dashboard > Manage Jenkins > plugins > available plugins install Github plugin
 copy the git path, go to jenkins UI Dashboard > Manage Jenkins > Tools Under Git Installations
 
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/075fe103-0e8b-41c3-9f7e-320fd094fa66)
+
+Integrate Maven with Jenkins (Maven version 3.8)
+1. Setup Maven on Jenkins Server
+2. Setup Environment Variables JAVA_HOME, M2, M2_HOME
+3. Install Maven plugin
+4. Configure Maven and Java
+
+On the Jenkins Server
+```
+cd /opt
+wget https://dlcdn.apache.org/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz
+ll
+tar -xvzf apache-maven-3.9.6-bin.tar.gz
+ll
+mv apache-maven-3.9.6 maven     # renaming the file
+ll
+```
+
+To set the environment variables
+
+```
+cd ~
+find / -name java-11*  # Copy the jvm path
+ll -a
+vi .bash_profile
+
+M2_HOME=/opt/maven
+M2=/opt/maven/bin
+JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.22.0.7-1.amzn2.0.1.x86_64
+PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
+
+```
+![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/f428606e-44f2-4907-88fb-6425cc267c8e)
+![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/198d8d8a-8742-4980-8896-1796a6997120)
+
+```
+source .bash_profile
+echo $PATH
+```
+
+go to jenkins UI Dashboard > Manage Jenkins > plugins > available plugins install maven integration plugin
+Manage Jenkins > Tools > Under JDK Installations and Maven installation give the home path
+
+![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/4835e2a5-2721-4d54-bd13-df581d0e98fb)
+
+Uncheck automatic maven installation 
+
+![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/ca343272-57e7-4132-aa51-9bbfaeba53f2)
+
+Create a Build job using maven project
+
 
