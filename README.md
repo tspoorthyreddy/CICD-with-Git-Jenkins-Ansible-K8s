@@ -79,4 +79,5 @@ tomcatup
 
 Integrate Tomcat with Jenkins
 1. Install "Deploy to container" plugin
-2. on jenkins Configure tomcat server with credentials 
+2. On Jenkins Configure tomcat developer credentials 
+
