@@ -1,2 +1,4 @@
-# CICD with Git Jenkins Ansible K8s
-![Screen Shot 2024-02-20 at 4 53 00 PM](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/083df7f7-c511-4207-9624-e275531833bd)
+# Deploy Artifact on a Tomcat Server
+
+![Screen Shot 2024-02-20 at 4 47 26 PM](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/964358cc-edf1-49f7-a0f4-93fa4a275007)
+
