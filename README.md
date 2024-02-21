@@ -1,4 +1,7 @@
 # CICD using Git, Jenkins & Maven
+
+![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/860eeddd-4019-4ef5-88dd-8cf6d1cfbd60)
+
 Create EC2 with Amazon Linux 2 
 
 ssh into the instance
