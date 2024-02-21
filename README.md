@@ -37,4 +37,46 @@ find / -name context.xml
 vi /opt/tomcat/webapps/host-manager/META-INF/context.xml
 vi /opt/tomcat/webapps/manager/META-INF/context.xml
 vi /opt/tomcat/webapps/docs/META-INF/context.xml
+
+cd bin
+./shutdown.sh
+./startup.sh
+cd ..
+cd conf
+vi tomcat-users.xml
 ```
+Update user's information in the tomcat-users.xml file
+Place the below line at the end of the file before </tomcat-users>
+```
+ <role rolename="manager-gui"/>
+ <role rolename="manager-script"/>
+ <role rolename="manager-jmx"/>
+ <role rolename="manager-status"/>
+ <user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+ <user username="deployer" password="deployer" roles="manager-script"/>
+ <user username="tomcat" password="s3cret" roles="manager-gui"/>
+```
+
+create link files for tomcat startup.sh and shutdown.sh
+```
+ln -s /opt/tomcat/bin/startup.sh /usr/local/bin/tomcatup
+ln -s /opt/tomcat/bin/shutdown.sh /usr/local/bin/tomcatdown
+tomcatup
+```
+check if echo $PATH has /usr/local/bin in its path if not 
+```
+cd ~
+ll -a
+vi .bash_profile
+
+PATH=$PATH:$HOME/bin:/usr/local/bin     # add /usr/local/bin to the path line save and exit the file
+
+source .bash_profile
+echo $PATH
+tomcatdown
+tomcatup
+```
+
+Integrate Tomcat with Jenkins
+1. Install "Deploy to container" plugin
+2. on jenkins Configure tomcat server with credentials 
