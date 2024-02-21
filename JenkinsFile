@@ -1,14 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout') {
+    stage('Fetch-Code') {
       steps {
         git branch: 'CICD-using-Git,-Jenkins-&-Maven', url: 'https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s.git'
-      }
-    }
-    stage('Build and Test') {
-      steps {
-        sh 'cd /var/lib/jenkins/workspace/BuildPipeline && mvn clean install'
       }
     }
   }
