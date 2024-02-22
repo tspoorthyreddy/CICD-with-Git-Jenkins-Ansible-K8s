@@ -106,6 +106,18 @@ sudo vi /etc/ansible/hosts
 ```
 ssh-copy-id <ansible server pri ip>
 ansible all -a uptime
-vi regapp.yml
+vi regapp.yml                         # write ansible playbook
+ansible-playbook regapp.yml --check   # to check if the playbook is running fine
+ansible-playbook regapp.yml
+docker images
 ```
-write ansible playbook
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Automate Pushing created Docker image to docker hub
+
+On ansible server
+```
+vi regapp.yml                         # modify ansible playbook
+ansible-playbook regapp.yml --check   # to check if the playbook is running fine
+ansible-playbook regapp.yml
+```
