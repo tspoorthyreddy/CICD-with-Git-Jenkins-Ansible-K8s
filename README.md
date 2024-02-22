@@ -82,6 +82,43 @@ ansible all -m command -a uptime    # to check uptime of all the servers connect
 
 Integrate Ansible with Jenkins
 
+Create a job : give github details and maven clean install
+
 Add SSH server
 ![Screen Shot 2024-02-22 at 5 26 38 PM](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/40f63675-6bb8-441b-973d-5f21865a1515)
 
+On ansible server
+```
+su - ansadmin
+cd /opt
+sudo mkdir docker
+sudo chown -R ansadmin:ansadmin docker
+```
+Now when you run the job it will deploy artifact into Ansible
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Build an image and create container on Ansible
+
+```
+sudo yum install docker -y
+sudo usermod -aG docker ansadmin     # add ansadmin user to docker group so it can execute docker commands
+id ansadmin
+sudo service docker start
+service docker status
+vi Dockerfile
+
+From tomcat:latest
+RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
+COPY ./*.war /usr/local/tomcat/webapps
+
+docker build -t regapp:v1 .                                            # if it throws permission error for a file
+sudo chmod 777 /var/run/docker.sock
+docker build -t regapp:v1 .
+docker images
+docker run -d --name regapp-server -p 8081:8080 regapp:v1
+```
+Ansible Playbook to automatically create an image using the artifact
+```
+sudo vi /etc/ansible/hosts
+```
+![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/eba42db8-e96a-4e75-9161-eaa764d6bc84)
