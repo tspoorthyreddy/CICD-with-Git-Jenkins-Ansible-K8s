@@ -6,3 +6,9 @@
     command: docker build -t regapp:latest .
     args:
       chdir: /opt/docker
+
+  - name: create tag to push image onto dockerhub
+    command: docker tag regapp:latest spoorthy07/regapp:latest
+
+  - name: push docker image
+    command: docker push spoorthy07/regapp:latest
