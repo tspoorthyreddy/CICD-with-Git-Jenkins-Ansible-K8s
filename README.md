@@ -3,9 +3,11 @@
 
 1. I create an Ec2 instance with user data to install Jenkins, maven
 
+
 2. I create an EC2 instance install java and configure tomcat on it.
 3. On Jenkins install a "Deploy to container" plugin and configure tomcat credentials on Jenkins
 4. Deploy the application on tomcat server
+
   
 5. I create another EC2 instance and install Docker on it
 6. Write a custom Dockerfile which pulls Tomcat image from Dockerhub and resolves 404 issue
@@ -14,5 +16,6 @@
 9. Install "Publish Over SSH" plugin on Jenkins and add dockerhost to jenkins
 10. Create a job to pull the code from git and build it with maven and push the artifact to dockerhost which inturn will be copied to tomcat container
 11. Automate the process of building the image and container
+
 
 12. 
