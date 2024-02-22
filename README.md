@@ -63,3 +63,13 @@ usermod -aG docker dockeradmin
 id dockeradmin
 su - dockeradmin
 ```
+Dashboard > Manage Jenkins > Systems
+Add SSH servers
+Name: dockerhost
+Hostname: docker server private ip
+Username : dockerhost
+check use password authentication
+give the password
+Test connection
+save
+
