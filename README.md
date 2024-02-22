@@ -73,3 +73,25 @@ give the password
 Test connection
 save
 
+Create a job to pull the code from git and build it with maven and push the artifact to dockerhost
+```
+cd /opt
+mkdir docker
+chown -R dockeradmin:dockeradmin docker
+mv /root/Dockerfile /opt/docker
+chown -R dockeradmin:dockeradmin Dockerfile
+```
+Now in the build see to that the war file is deployed in /opt/docker
+Now we need to modify the Dockerfile to automatically pick the war file from the dockerhost into the container
+befor
+ ```
+vi Dockerfile
+
+From tomcat:latest
+RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
+COPY ./*.war /usr/local/tomcat/webapps
+
+```
+
+Now modify the job to automatically create an image and container
+
