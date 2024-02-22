@@ -36,10 +36,10 @@ amazon-linux-extras install ansible2
 python --version
 ansible --version
 ```
-
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Manage DockerHost with Ansible
+
 --> On Docker Host
 1. Create ansadmin
 ```
@@ -78,10 +78,10 @@ ssh-copy-id <docker server private ip>
 ansible all -m ping                 # to check the connection with all the hosts that the ansible server is connected to
 ansible all -m command -a uptime    # to check uptime of all the servers connected to ansible
 ```
-
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Integrate Ansible with Jenkins
+
 Add SSH server
 ![Screen Shot 2024-02-22 at 5 26 38 PM](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/40f63675-6bb8-441b-973d-5f21865a1515)
 
