@@ -130,4 +130,5 @@ Automate Ansible to create a container on docker host and pull image from docker
 write another ansible playbook 
 ```
 vi deploy_regapp.yml
-
+ansible-playbook regapp.yml --check   # to check if the playbook is running fine
+ansible-playbook regapp.yml
