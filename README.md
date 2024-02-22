@@ -10,7 +10,9 @@
    passwd ansadmin
    ```
 4. Add user to sudoers file
+   
   visudo
+  
 add the line ansadmin ALL=(ALL) NOPASSWD: ALL
 ![Screen Shot 2024-02-22 at 4 47 21 PM](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/3fae2c36-48e5-42f7-b3c3-74a675f02a9e)
 
