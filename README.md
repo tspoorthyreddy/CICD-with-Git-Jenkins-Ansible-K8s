@@ -46,3 +46,17 @@ docker images
 docker run -d --name mytomcat-server -p 8083:8080 mytomcat
 docker stop mytomcat-server
 ```
+Integrate docker with Jenkins
+1. Create a dockeradmin user
+2. Install "Publish Over SSH" plugin
+3. Add Dockerhost to Jenkins "configure systems"
+
+```
+cat /etc/group
+useradd dockeradmin
+passwd dockeradmin
+id dockeradmin
+usermod -aG docker dockeradmin
+id dockeradmin
+su - dockeradmin
+```
