@@ -38,3 +38,11 @@ Create a docker image to install tomcat on centos
 
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/bf855f05-124f-438a-b0e4-c229f6065d09)
 
+Write the dockerfile and create an image 
+Using the image create a container
+```
+docker build -t mytomcat .
+docker images
+docker run -d --name mytomcat-server -p 8083:8080 mytomcat
+docker stop mytomcat-server
+```
