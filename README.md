@@ -69,6 +69,7 @@ service sshd reload
 vi /etc/ansible/hosts
 ```
 Delete everything already present in this file and add the docker server private IP to that file .save and exit
+
 2. Copy ssh keys
 ```
 su - ansadmin
@@ -123,7 +124,7 @@ vi regapp.yml                         # modify ansible playbook
 ansible-playbook regapp.yml --check   # to check if the playbook is running fine
 ansible-playbook regapp.yml
 ```
-On Jenkins server within the jon under ansible ssh server add the command to run ansible playbook under Exec Command
+On Jenkins server within the job under ansible ssh server add the command to run ansible playbook under Exec Command
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/97497791-0cfe-4788-a6e3-7624760b64ec)
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
