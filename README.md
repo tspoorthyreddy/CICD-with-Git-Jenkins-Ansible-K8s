@@ -4,7 +4,7 @@
 1. I create an Ec2 instance with user data to install Jenkins, maven
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 2. I create an EC2 instance install java and configure tomcat on it.
-3. On Jenkins install a "Deploy to container" plugin and configure tomcat credentials on Jenkins
+3. On Jenkins install a "Deploy to container", "Maven" plugin and configure tomcat credentials on Jenkins
 4. Deploy the application on tomcat server
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 5. I create another EC2 instance and install Docker on it
