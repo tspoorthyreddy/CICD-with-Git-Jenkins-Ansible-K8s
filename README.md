@@ -34,11 +34,14 @@ cp -R * ../webapps                             # copy contents from webapps.dist
 
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/fc9b516e-b18c-4a46-81fa-ebfb206dbd85)
 
-Create a docker image to install tomcat on centos
+Write a custom Dockerfile of Tomcat image with resolved 404 issue
 
-![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/bf855f05-124f-438a-b0e4-c229f6065d09)
+```
+vi Dockerfile
 
-Write the dockerfile and create an image 
+From tomcat:latest
+RUN cp -R /usr/local/tomcat/webapps.dist/* /usr/local/tomcat/webapps
+```
 Using the image create a container
 ```
 docker build -t mytomcat .
