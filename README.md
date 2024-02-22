@@ -31,3 +31,5 @@ docker exec -it tomcat-container /bin/bash     # login to the container
 cd webapps.dist/
 cp -R * ../webapps                             # copy contents from webapps.dist to webapps
 ```
+
+![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/fc9b516e-b18c-4a46-81fa-ebfb206dbd85)
