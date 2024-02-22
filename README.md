@@ -74,6 +74,7 @@ Test connection
 save
 
 Create a job to pull the code from git and build it with maven and push the artifact to dockerhost
+
 ```
 cd /opt
 mkdir docker
@@ -94,4 +95,9 @@ COPY ./*.war /usr/local/tomcat/webapps
 ```
 
 Now modify the job to automatically create an image and container
+![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/44c9b81a-d018-4c16-8af2-18c9799becf7)
+![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/1e9c2da3-1189-48b9-994c-65853a76d64c)
+![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/1a0828ff-77dc-40ac-989c-be1c8a2c5dba)
+![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/3036980d-3a78-44d8-83d5-7b8a935848cf)
+
 
