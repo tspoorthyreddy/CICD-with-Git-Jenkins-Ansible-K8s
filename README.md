@@ -15,3 +15,19 @@ service docker start
 service docker status
 ```
 
+Pull tomcat image from dockerhub
+create container using that image
+
+```
+docker pull tomcat
+docker run -d --name tomcat-container -p 8081:8080 tomcat
+docker ps -a
+```
+
+On browser <server pub IP>:8081
+If you are getting HTTP Status 404 - Not Found error
+```
+docker exec -it tomcat-container /bin/bash     # login to the container
+cd webapps.dist/
+cp -R * ../webapps                             # copy contents from webapps.dist to webapps
+```
