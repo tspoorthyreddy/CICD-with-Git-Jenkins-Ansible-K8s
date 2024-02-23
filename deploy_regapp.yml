@@ -2,5 +2,14 @@
 - hosts: dockerhost
 
   tasks:
+  - name: stop existing container
+    command: docker stop regapp-server
+
+  - name: remove the container
+    command: docker rm regapp-server
+
+  - name: remove image
+    command: docker rmi spoorthy07/regapp:latest
+
   - name: create container
     command: docker run -d --name regapp-server -p 8082:8080 spoorthy07/regapp:latest
