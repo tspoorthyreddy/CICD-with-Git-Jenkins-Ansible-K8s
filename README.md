@@ -120,6 +120,9 @@ create a new job to pull an image from dockerhub and deploy on kubernetes
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/20d64caa-8d91-498d-b705-331f693c012f)
 
 
-
+To delete cluster
+```
+eksctl delete cluster regapp --region us-east-1
+```
 
 
