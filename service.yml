@@ -8,5 +8,8 @@ spec:
   - name: nginx-port
     port: 80
     targetPort: 80
+
+  selector:
+    app: demo-app
       
   type: LoadBalancer
