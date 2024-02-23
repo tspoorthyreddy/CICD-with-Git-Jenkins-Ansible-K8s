@@ -133,5 +133,24 @@ Automate Ansible to create a container on docker host and pull image from docker
 write another ansible playbook 
 ```
 vi deploy_regapp.yml
-ansible-playbook regapp.yml --check   # to check if the playbook is running fine
+ansible-playbook deploy_regapp.yml --check   # to check if the playbook is running fine
+ansible-playbook deploy_regapp.yml
+```
+if you get permission error
+on docker server
+```
+sudo chmod 777 /var/run/docker.sock
+```
+on ansible server
+```
 ansible-playbook regapp.yml
+```
+This should create the container on docker host
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Jenkins will automate the process of running the container
+![Screen Shot 2024-02-22 at 5 26 38 PM](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/01d15a24-d1a7-4bd6-b438-26d21396922c)
+
+
+
+Automate the whole process where jenkins picks the code from github and builds it with maven and deploys the artifact on ansible host .Ansible will create an image out of the artifact on the ansible server and push it to dockerhub and ansible will trigger docker host to pull the image from docker hub and create a container.
