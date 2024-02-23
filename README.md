@@ -122,7 +122,7 @@ create a new job to pull an image from dockerhub and deploy on kubernetes
 
 To delete cluster
 ```
-eksctl delete cluster regapp --region us-east-1
+eksctl delete cluster regapp-cluster --region us-east-1
 ```
 
 
