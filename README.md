@@ -113,7 +113,7 @@ Create a job to pull code from git , build the code , push the artifact to ansib
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/bd99baae-9b4c-4eae-82c7-237d8c232961)
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/37849cef-de69-4ad9-882d-18f2e574401f)
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/32b5b2c5-95dc-4031-9058-ecb601a08ae4)
-![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/e1ab4381-90b3-4d4f-8e6a-54531629776f)
+![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/2c7b8e8b-fbee-4f26-98ae-534986629277)
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/2a816a85-ba19-4278-85c1-338997d5c362)
 
 create a new job to pull an image from dockerhub and deploy on kubernetes
