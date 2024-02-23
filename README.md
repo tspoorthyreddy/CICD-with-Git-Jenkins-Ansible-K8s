@@ -83,11 +83,13 @@ service sshd reload
 ```
 
 --> On Ansible Server
+
 1.Add to hosts file
 ```
 vi /etc/ansible/hosts
 ```
 Add K8s server private IP and ansible private IP .save and exit
+
 2.Copy ssh keys
 ```
 su - ansadmin
