@@ -71,6 +71,7 @@ visudo
 ```
 add the line ansadmin ALL=(ALL) NOPASSWD: ALL
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/fd6614e8-d185-4b2d-a7bc-a716b194704d)
+
 3. Enable password based login
 ```
 vi /etc/ssh/sshd_config
