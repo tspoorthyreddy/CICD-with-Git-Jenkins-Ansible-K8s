@@ -17,14 +17,15 @@
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 12. I create another EC2 instance for Ansible
 13. Configure ansible server(Create ansadmin user , add it to sudoers file.Generate ssh keys, generate password based login) and install ansible
-15.Configure docker host so it can be managed by ansible servera(do the same process of creating user, add to sudoers and enable password based login on docker host)
-16. Update the hosts file on ansible and copy the ssh keys(On ansible server add docker ip and ansible ip in the hosts file and copy ssh keys from ansible to docker and ansible to ansible)
-17. Integrate ansible with jenkins
-18. Create ansible playbooks to create an image using the artifact and to push the artifact to docker hub and also trigger docker host to pull the image from docker hub and create a container
+    
+14.Configure docker host so it can be managed by ansible servera(do the same process of creating user, add to sudoers and enable password based login on docker host)
+15. Update the hosts file on ansible and copy the ssh keys(On ansible server add docker ip and ansible ip in the hosts file and copy ssh keys from ansible to docker and ansible to ansible)
+16. Integrate ansible with jenkins
+17. Create ansible playbooks to create an image using the artifact and to push the artifact to docker hub and also trigger docker host to pull the image from docker hub and create a container
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-19. I create another EC2 instance for K8s
-20. Install awscli,ekscli,kubectl,create IAM role for your ec2 and finally create your cluster and nodes
-21. On k8s server write deployment and service manifest files
-22. Integrate Kubernetes with ansible(create ansible user on k8s, add it to sudoers file, enable password based login and on ansible server add k8s ip to hosts fils, copy ssh keys onto root user from ansible and test the connection)
-23. On ansible server write deploy and service.yml playbook which triggers the deployment and service manifest files on k8s server
-24. Finally integrate jenkins create CICD pipelines which will pick the code from git build using maven , push the artifact to ansible where image will be created using this artifact and the image will be pushed to dockerhub, and ansible will trigger kubernetes to pull the image and deploy pods and service
+18. I create another EC2 instance for K8s
+19. Install awscli,ekscli,kubectl,create IAM role for your ec2 and finally create your cluster and nodes
+20. On k8s server write deployment and service manifest files
+21. Integrate Kubernetes with ansible(create ansible user on k8s, add it to sudoers file, enable password based login and on ansible server add k8s ip to hosts fils, copy ssh keys onto root user from ansible and test the connection)
+22. On ansible server write deploy and service.yml playbook which triggers the deployment and service manifest files on k8s server
+23. Finally integrate jenkins create CICD pipelines which will pick the code from git build using maven , push the artifact to ansible where image will be created using this artifact and the image will be pushed to dockerhub, and ansible will trigger kubernetes to pull the image and deploy pods and service
