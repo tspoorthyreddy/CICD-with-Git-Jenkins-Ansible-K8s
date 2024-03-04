@@ -18,7 +18,7 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
 sudo apt-get update
 sudo apt-get install jenkins -y
 ```
-Access jenkins with <server public ip>:8080
+Access jenkins with server public ip:8080
 
 Install Plugins Maven, Publish Over SSH on Jenkins
 
@@ -39,7 +39,7 @@ cd sonarqube-9.4.0.54424/bin/linux-x86-64/
   
 3. Configure Sonarqube on Jenkins GUI
 
-access sonarqube on <server public ip>:9000
+access sonarqube on server public ip:9000
 
 Add sonarqube credentials in jenkins
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/ab4877f7-d00f-4129-bab2-28ccb59e340c)
