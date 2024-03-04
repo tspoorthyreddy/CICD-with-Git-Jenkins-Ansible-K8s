@@ -35,7 +35,7 @@ chown -R sonarqube:sonarqube /home/sonarqube/sonarqube-9.4.0.54424
 cd sonarqube-9.4.0.54424/bin/linux-x86-64/
 ./sonar.sh start
 ```
-2. Install "Sonarqube Scanner" Plugin on Jenkins GUI
+2. Install Sonarqube Scanner, Sonar Quality Gates  Plugins on Jenkins GUI
   
 3. Configure Sonarqube on Jenkins GUI
 
@@ -44,4 +44,8 @@ access sonarqube on server public ip:9000
 Add sonarqube credentials in jenkins
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/ab4877f7-d00f-4129-bab2-28ccb59e340c)
 
+4. On sonar GUI set quality gates
 
+Quality Gates > Create > give name > Save > Add condition > select  on overall code  from from drop-down select bugs give value and save
+
+Projects > Project name > project settings > quality gates > always use a specific quality gate > from drop down select your quality gate > save
