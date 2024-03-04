@@ -1,8 +1,8 @@
-# CICD using Git, Jenkins & Maven
+# CICD using Git, Jenkins, Maven & Sonarqube
 
 ![image](https://github.com/tspoorthyreddy/CICD-with-Git-Jenkins-Ansible-K8s/assets/93954534/860eeddd-4019-4ef5-88dd-8cf6d1cfbd60)
 
-Create EC2 with Amazon Linux 2 
+Create ubuntu EC2
 
 ssh into the instance
 From https://www.jenkins.io/download/ copy the first 2 steps of repo like below
