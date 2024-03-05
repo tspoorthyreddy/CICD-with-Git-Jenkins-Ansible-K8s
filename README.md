@@ -102,7 +102,6 @@ ssh-copy-id root@<kubernetes pri ip>
 ```
 3.Test the connection
 ```
-cd /home
 ansible all -m ping                 # to check the connection with all the hosts that the ansible server is connected to
 ansible all -m command -a uptime    # to check uptime of all the servers connected to ansible
 ```
