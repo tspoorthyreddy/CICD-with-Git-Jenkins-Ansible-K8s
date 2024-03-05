@@ -119,6 +119,7 @@ sudo chown ansadmin:ansadmin docker
 cd docker
 vi Dockerfile
 ```
+
 On ansible server
 ```
 cd /opt/docker
