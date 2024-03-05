@@ -107,6 +107,19 @@ ansible all -m ping                 # to check the connection with all the hosts
 ansible all -m command -a uptime    # to check uptime of all the servers connected to ansible
 ```
 
+4. On ansible server
+```
+sudo yum install docker -y
+sudo usermod -aG docker ansadmin
+id ansadmin
+service docker status
+sudo service docker start
+cd /opt
+sudo mkdir docker
+sudo chown ansadmin:ansadmin docker
+cd docker
+vi Dockerfile
+```
 On ansible server
 ```
 cd /opt/docker
