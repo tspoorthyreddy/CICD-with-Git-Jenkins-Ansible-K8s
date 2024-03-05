@@ -120,6 +120,7 @@ vi regapp.yml                         # write ansible playbook
 ansible-playbook regapp.yml --check   # to check if the playbook is running fine
 ansible-playbook regapp.yml
 docker images
+docker login
 ```
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
