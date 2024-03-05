@@ -82,7 +82,10 @@ unhash Password yes and hash password no
 ```
 service sshd reload
 ```
-
+4.Generate password for root user
+  ```
+   passwd
+```
 --> On Ansible Server
 
 1.Add to hosts file
