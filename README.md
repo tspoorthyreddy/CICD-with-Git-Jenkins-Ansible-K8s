@@ -92,10 +92,17 @@ Add SSH server
 
 On ansible server
 ```
+sudo yum install docker -y
+sudo usermod -aG docker ansadmin
+id ansadmin
+service docker status
+sudo service docker start
 su - ansadmin
 cd /opt
 sudo mkdir docker
 sudo chown -R ansadmin:ansadmin docker
+cd docker
+vi Dockerfile
 ```
 Now when you run the job it will deploy artifact into Ansible
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
