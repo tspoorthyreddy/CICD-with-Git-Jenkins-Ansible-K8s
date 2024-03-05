@@ -89,7 +89,7 @@ service sshd reload
 ```
 vi /etc/ansible/hosts
 ```
-Add K8s server private IP and ansible private IP .save and exit
+Delete everything already present in this file and Add K8s server private IP and ansible private IP .save and exit
 
 2.Copy ssh keys
 ```
